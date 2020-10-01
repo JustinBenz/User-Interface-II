@@ -61,6 +61,7 @@ header h1{
 }
 .s1Right button{
     font-family: 'Fira Sans', sans-serif;
+    font-size: 1em;
     background-color: #0F1923;
     color: #ECE8E1;
     padding: 15px;
