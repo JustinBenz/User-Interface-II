@@ -1,5 +1,5 @@
 /* Add CSS styling here */
-body, html{
+body{
     max-width: 100%;
     margin: 0;
     padding: 0;
@@ -45,7 +45,7 @@ header h1{
     width: 50%;
     background-image: url('https://picsum.photos/1920/1080');
     background-size: cover;
-    margin: 1%;
+    margin: 1% 0 0 1%; 
 }
 
 .s1Right{
@@ -54,7 +54,7 @@ header h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 2%;
+    margin: 1% 0;
 }
 
 .s1Right button{
@@ -124,10 +124,9 @@ footer a{
 @media(max-width: 500px){
     header {
         flex-flow: column nowrap;
-        height: 22vh
     }
-    header nav{
-        flex-flow: column nowrap;
+    header nav.nav{
+        flex-direction: column;
     }
     .s1{
         flex-flow: column nowrap;
@@ -142,5 +141,8 @@ footer a{
     .gallcont{
         height: 200px;
         width: 200px;
+    }
+    .s1Right, .s1Left{
+        margin: 0;
     }
 }
