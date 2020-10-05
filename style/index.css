@@ -12,53 +12,51 @@ header{
     background-color: #111111;
     width: 100%;
     height: 15vh;
+    display: flex;
+    flex-flow: column wrap;
     color: #ECE8E1;
 }
 header nav{
-    width: 30%;
+    width: 60%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: left;
+    margin-left: 2%;  
 }
 header nav a{
-    width: calc(100%/4);
     text-decoration: none;
     color: #ECE8E1;
     text-align: center;
 }
 header h1{
-    display: inline-block;
-    text-align: center;
     margin-left: 2.7%;
 }
-.s1wrap{
+.s1{
     width: 100%;
     height: 50vh;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
-    margin-top: 4%;
+
 }
 .s1Left{
-    width: 47%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     background-image: url('https://picsum.photos/1920/1080');
     background-size: cover;
-    margin-top: 15px;
+    margin: 1%;
 }
 
 .s1Right{
-    width: 47%;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    
+    justify-content: center;
+    align-items: center;
+    margin: 2%;
 }
-.s1Right h1{
-    font-size: 50px;
-}
+
 .s1Right button{
     font-family: 'Fira Sans', sans-serif;
     font-size: 1em;
@@ -66,6 +64,12 @@ header h1{
     color: #ECE8E1;
     padding: 15px;
     border: none;
+    margin-bottom: 2%;
+}
+
+.s1Right p1{
+    width: 50%;
+    text-align: center;
 }
 .gall{
     width: 100%;
@@ -79,9 +83,7 @@ header h1{
     width: 300px;
     background-image: url('https://picsum.photos/250/250');
     background-size: cover;
-    margin-right: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin: 3%;
 }
 
 footer{
@@ -102,4 +104,43 @@ footer a{
     background-color: #0F1923;
     margin-bottom: 25px;
     text-decoration: none;
+}
+
+@media(max-width: 800px){
+    header{
+        align-items: center;
+    }
+    header h1{
+        align-self:center;
+    }
+    header nav{
+        width: 50%;
+        justify-content: space-between;
+    }
+    .s1Right p1{
+        width: 100%;
+    }
+}
+@media(max-width: 500px){
+    header {
+        flex-flow: column nowrap;
+        height: 22vh
+    }
+    header nav{
+        flex-flow: column nowrap;
+    }
+    .s1{
+        flex-flow: column nowrap;
+    }
+    .s1Left {
+        width: 100%;
+        height: 500px;
+    }
+    .s1Right{
+        width: 100%;
+    }
+    .gallcont{
+        height: 200px;
+        width: 200px;
+    }
 }
